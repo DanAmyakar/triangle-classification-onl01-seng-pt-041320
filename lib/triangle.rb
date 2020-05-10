@@ -28,6 +28,8 @@ class Triangle
     if valid_flag == false
       begin
         raise TriangleError
+      rescue TriangleError => error
+      
   end
   
   def equilateral
