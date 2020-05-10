@@ -29,10 +29,26 @@ class Triangle
   
   def valid?
     valid_flag = false
+    valid_flag = true if @atrs.none?{|atr| atr <= 0}
+    valid_flag
+  end
+  
+  def equilateral
+    :equilateral if (@a == @b && @a == @c)
+  end
+  
+  def isosceles
+    :isosceles if ()
+  end
+  
+  def scalene
   end
   
   def kind
-    if valid? == false
+    if valid? == true
+      
+      
+    else valid? == false
       raise TriangleError
     end
   end
