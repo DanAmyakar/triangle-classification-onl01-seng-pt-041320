@@ -10,7 +10,6 @@ class Triangle
   
   attr_reader :a, :b, :c
   @@all = []
-  @atrs = [@side_a, @side_b, @side_c]
   
   def initialize(a, b, c)
     @a = a
@@ -29,10 +28,10 @@ class Triangle
   
   def valid?
     valid_flag = nil
-    if (@atrs[0] > 0 && @atrs[1] > 0 && @atrs[2] > 0)
+    if (@a> 0 && @b > 0 && @c > 0)
       valid_flag = true
     end
-    if ((@atrs[0] + @atrs[1]) < @atrs[2] && (@atrs[1] + @atrs[2]) < @atrs[0] && (@atrs[2] + @atrs[0]) < @atrs[1])
+    if ((@a + @b) < @c && (@b + @c) < @a && (@c + @a < @b)
       valid_flag = false
     end
     valid_flag
