@@ -35,11 +35,11 @@ class Triangle
     end
   end
   
-  def equilateral?
+  def equilateral
     :equilateral if (@a == @b && @a == @c)
   end
   
-  def isosceles?
+  def isosceles
     :isosceles if (((@a==@b) && (@a!=@c)) || ((@a==@c) && (@a!=@b)) || ((@b==@c) && (@b!=@a)))
   end
   
