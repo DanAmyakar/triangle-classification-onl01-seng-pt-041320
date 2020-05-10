@@ -33,7 +33,8 @@ class Triangle
     if valid? == false
       begin
         raise TriangleError
-      rescue TriangleError
+      rescue TriangleError => message
+        puts error.message
   end
   
 end
