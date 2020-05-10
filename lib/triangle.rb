@@ -35,15 +35,15 @@ class Triangle
     end
   end
   
-  def equilateral
+  def equilateral?
     :equilateral if (@a == @b && @a == @c)
   end
   
-  def isosceles
+  def isosceles?
     :isosceles if ()
   end
   
-  def scalene
+  def scalene?
   end
   
   def kind
