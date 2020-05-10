@@ -29,7 +29,7 @@ class Triangle
   
   def valid?
     valid_flag = false
-    if @atrs.none?{|atr| atr <= 0} && (@atrs[0] + @atrs[1]) > @atrs[2] &&
+    if (@atrs.none?{|atr| atr <= 0} && (@atrs[0] + @atrs[1]) > @atrs[2] &&
       (@atrs[1] + @atrs[2]) > @atrs[0] && (@atrs[2] + @atrs[0]) > @atrs[1])
       valid_flag = true
     end
