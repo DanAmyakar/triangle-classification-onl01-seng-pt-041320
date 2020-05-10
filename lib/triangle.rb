@@ -22,7 +22,8 @@ class Triangle
   end
   
   def valid?
-    valid_flag = false if @atrs.any? <= 0
+    valid_flag = false
+    valid_flag = false if (@atrs[0] <= 0 && @atrs[1] <= 0 && @atrs[2])
     valid_flag = true if ((@atrs[0] + @atrs[1]) > @atrs[2] && (@atrs[0] + @atrs[2]) > @atrs[1] && (@atrs[1] + @atrs[2]) > @atrs[0])
     valid_flag
   end
