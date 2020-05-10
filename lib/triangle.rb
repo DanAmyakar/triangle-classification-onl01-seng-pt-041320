@@ -32,7 +32,7 @@ class Triangle
   def kind
     if valid? == false
       begin
-        rescue 
+        rescue TriangleError
   end
   
 end
