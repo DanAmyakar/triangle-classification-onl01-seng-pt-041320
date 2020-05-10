@@ -28,13 +28,11 @@ class Triangle
   
   def valid?
     valid_flag = nil
-    if (@a> 0 && @b > 0 && @c > 0)
+    if ((@a > 0) && (@b > 0) && (@c > 0) && ((@a + @b) > @c && (@b + @c) > @a && (@c + @a) > @b))
       valid_flag = true
-    end
-    if ((@a + @b) < @c && (@b + @c) < @a && (@c + @a < @b)
+    else
       valid_flag = false
     end
-    valid_flag
   end
   
   def equilateral?
