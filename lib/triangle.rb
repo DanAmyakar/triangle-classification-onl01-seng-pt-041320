@@ -27,5 +27,6 @@ class Triangle
     @@all
   end
   
+  def valid
   
 end
