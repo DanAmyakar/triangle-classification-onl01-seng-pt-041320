@@ -27,36 +27,5 @@ class Triangle
     @@all
   end
   
-  def valid?
-    valid_flag = false
-    valid_flag = false if (@atrs[0] <= 0 && @atrs[1] <= 0 && @atrs[2] <= 0)
-    valid_flag = true if ((@atrs[0] + @atrs[1]) > @atrs[2] && (@atrs[0] + @atrs[2]) > @atrs[1] && (@atrs[1] + @atrs[2]) > @atrs[0])
-    valid_flag
-  end
-  
-  def equilateral
-    :equilateral if ( @side_a == @side_b && @side_a == @side_c)
-  end
-  
-  def isosceles
-    :isosceles if (@side_a == @side_b || @side_a == @side_c || @side_b == @side_c)
-  end
-  
-  def scalene
-    @atrs.collect.sort {|a, b| a <=> b}
-    :scalene if (@atrs[0] > @atrs[1] && @atrs[0] != @atrs[1] && @atrs[1] != @atrs[2]) 
-  end
-  
-  def kind
-    if valid? == false
-      begin
-        raise TriangleError
-      rescue TriangleError => error
-        puts error.message
-      end
-    else
-      equilateral || isosceles || scalene
-    end
-  end
   
 end
