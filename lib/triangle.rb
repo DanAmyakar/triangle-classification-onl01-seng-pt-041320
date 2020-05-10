@@ -28,13 +28,17 @@ class Triangle
   end
   
   def valid?
+    valid_flag = false
+  end
   
   def kind
     if valid? == false
       begin
         raise TriangleError
-      rescue TriangleError => message
+      rescue TriangleError => error
         puts error.message
+      end
+    end
   end
   
 end
