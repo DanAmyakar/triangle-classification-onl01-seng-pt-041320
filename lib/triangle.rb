@@ -51,7 +51,8 @@ class Triangle
   
   def kind
     if valid? == true
-      equilateral || isosceles || scalene
+      :equilateral if (@a == @b && @a == @c)
+      #equilateral || isosceles || scalene
     else valid? == false
       raise TriangleError
     end
