@@ -23,9 +23,9 @@ class Triangle
   
   def valid?
     valid_flag = false if atrs.any? <= 0
-    valid_flag = true if (atrs[0] + atrs[1]) > atrs[2]
-    valid_flag = true if (atrs[0] + atrs[2]) > atrs[1]
-    valid_flag = true if (atrs[1] + atrs[2]) > atrs[0]
+    valid_flag = true if (@atrs[0] + @atrs[1]) > @atrs[2]
+    valid_flag = true if (@atrs[0] + @atrs[2]) > @atrs[1]
+    valid_flag = true if (@atrs[1] + @atrs[2]) > @atrs[0]
     if valid_flag == false
       begin
         raise TriangleError
