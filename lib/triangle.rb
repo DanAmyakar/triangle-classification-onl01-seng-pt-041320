@@ -4,12 +4,12 @@ class Triangle
   
   attr_reader :a, :b, :c
   @@all = []
+  @atrs = [@side_a, @side_b, @side_c]
   
   def initialize(a, b, c)
     @side_a = a
     @side_b = b
     @side_c = c
-    @atrs = [@side_a, @side_b, @side_c]
     save
   end
   
