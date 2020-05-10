@@ -9,6 +9,7 @@ class Triangle
     @side_a = a
     @side_b = b
     @side_c = c
+    @atrs = [@side_a, @side_b, @side_c]
     save
   end
   
@@ -20,21 +21,9 @@ class Triangle
     @@all
   end
   
-  def group
-    group = [@side_a, @side_b, @side_c]
-  end
-  
   def valid?
-    valid_flag = false
-    if ((@side_a > 0 && @side_b > 0 && @side_c > 0) && (@side_a + @side_b > @side_c || @side_a + @side_c > @side_b || @side_b + @side_c > @side_a))
-      valid_flag = true
-    else
-      begin
-        raise TriangleError
-      rescue TriangleError => error
-        puts error.message
-      end
-    end
+    valid_flag = false if atrs.any? < 0
+    valid_flag = false if atrs.any? == 0
     valid_flag
   end
   
