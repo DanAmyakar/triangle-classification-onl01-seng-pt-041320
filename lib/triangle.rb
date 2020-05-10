@@ -27,6 +27,8 @@ class Triangle
     @@all
   end
   
-  def valid
+  def kind
+    
+  end
   
 end
