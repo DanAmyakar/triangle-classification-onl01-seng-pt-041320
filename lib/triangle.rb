@@ -43,7 +43,8 @@ class Triangle
     :isosceles if (((@a==@b) && (@a!=@c)) || ((@a==@c) && (@a!=@b)) || ((@b==@c) && (@b!=@a)))
   end
   
-  def scalene?
+  def scalene
+    :scalene
   end
   
   def kind
