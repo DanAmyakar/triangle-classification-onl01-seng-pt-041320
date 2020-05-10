@@ -50,6 +50,7 @@ class Triangle
       end
     else
       equilateral || isosceles || scalene
+    end
   end
   
   
