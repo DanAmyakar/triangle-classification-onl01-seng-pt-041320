@@ -31,10 +31,9 @@ class Triangle
     valid_flag = true
     if (@atrs.none? {|atr| atr > 0}
       valid_flag = false
-    elsif (@atrs[0] + @atrs[1]) < @atrs[2] && (@atrs[1] + @atrs[2]) < @atrs[0] && (@atrs[2] + @atrs[0]) < @atrs[1])
+    end
+    if (@atrs[0] + @atrs[1]) < @atrs[2] && (@atrs[1] + @atrs[2]) < @atrs[0] && (@atrs[2] + @atrs[0]) < @atrs[1])
       valid_flag = false
-    else
-      valid_flag
     end
     valid_flag
   end
