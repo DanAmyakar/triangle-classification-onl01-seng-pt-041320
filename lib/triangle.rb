@@ -29,8 +29,10 @@ class Triangle
   
   def valid?
     valid_flag = false
-    valid_flag = true if @atrs.none?{|atr| atr <= 0}
-    valid_flag
+    if @atrs.none?{|atr| atr <= 0} && (@atrs[0] + @atrs[1]) > @atrs[2] &&
+      (@atrs[1] + @atrs[2]) > @atrs[0] && (@atrs[2] + @atrs[0]) > @atrs[1])
+      valid_flag = true
+    end
   end
   
   def equilateral
