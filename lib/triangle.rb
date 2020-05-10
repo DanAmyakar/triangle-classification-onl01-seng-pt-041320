@@ -48,8 +48,7 @@ class Triangle
   
   def kind
     if valid? == true
-      
-      
+      equilateral || isosceles || scalene
     else valid? == false
       raise TriangleError
     end
