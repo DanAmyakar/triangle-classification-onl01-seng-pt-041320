@@ -25,6 +25,9 @@ class Triangle
     valid_flag = false if atrs.any? < 0
     valid_flag = false if atrs.any? == 0
     valid_flag
+    if valid_flag == false
+      begin
+      
   end
   
   def equilateral
