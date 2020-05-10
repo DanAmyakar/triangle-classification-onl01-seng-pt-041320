@@ -26,13 +26,6 @@ class Triangle
     valid_flag = true if (@atrs[0] + @atrs[1]) > @atrs[2]
     valid_flag = true if (@atrs[0] + @atrs[2]) > @atrs[1]
     valid_flag = true if (@atrs[1] + @atrs[2]) > @atrs[0]
-    if valid_flag == false
-      begin
-        raise TriangleError
-      rescue TriangleError => error
-        puts error.message
-      end
-    end
   end
   
   def equilateral
@@ -44,13 +37,19 @@ class Triangle
   end
   
   def scalene
-    group.collect.sort {|a, b| a <=> b}
-    :scalene if (group[0] > group[1] && group[0] != group[1] && group[1] != group[2]) 
+    @atrs.collect.sort {|a, b| a <=> b}
+    :scalene if (@atrs[0] > @atrs[1] && @atrs[0] != @atrs[1] && @atrs[1] != @atrs[2]) 
   end
   
   def kind
-    valid?
-    equilateral || isosceles || scalene
+    if valid? == false
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+        puts error.message
+      end
+    else
+      equilateral || isosceles || scalene
   end
   
   
