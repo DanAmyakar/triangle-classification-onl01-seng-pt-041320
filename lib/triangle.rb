@@ -27,8 +27,12 @@ class Triangle
     @@all
   end
   
+  def valid?
+  
   def kind
-    
+    if valid? == false
+      begin
+        rescue 
   end
   
 end
